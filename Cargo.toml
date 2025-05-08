@@ -1,0 +1,18 @@
+[package]
+name = "fac"
+version = "1.0.0"
+edition = "2024"
+authors = ["Edwar Anthwam <https://github.com/1Terabit>"]
+description = "🚀 CLI to scaffold FastAPI projects"
+license = "MIT"
+repository = "https://github.com/1Terabit/fastapi-cli"
+keywords = ["cli", "scaffold", "fastapi"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "fac"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+dialoguer = "0.11.0"
