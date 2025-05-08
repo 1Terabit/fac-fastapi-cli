@@ -5,7 +5,7 @@ edition = "2024"
 authors = ["Edwar Anthwam <https://github.com/1Terabit>"]
 description = "🚀 CLI to scaffold FastAPI projects"
 license = "MIT"
-repository = "https://github.com/1Terabit/fastapi-cli"
+repository = "https://github.com/1Terabit/fac-fastapi-cli"
 keywords = ["cli", "scaffold", "fastapi"]
 categories = ["command-line-utilities"]
 
