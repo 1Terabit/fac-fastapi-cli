@@ -1,6 +1,10 @@
-# fac (FastAPI CLI)
 
-[![Created by 1Terabit](https://img.shields.io/badge/created%20by-1Terabit-orange.svg)](https://github.com/1Terabit)
+
+[![Created by 1Terabit](https://img.shields.io/badge/Created%20by-1Terabit-FF8C00?style=flat-square&logoColor=white)](https://github.com/1Terabit) [![Rust](https://img.shields.io/badge/Rust-E33616?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org/) [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/) [![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/) 
+
+<p align="center">
+  <img src="./assets/faspi.png" alt="Faspi Logo" width="250">
+</p>
 
 [Español](#español) | [English](#english)
 
@@ -24,36 +28,36 @@ A powerful and efficient CLI for generating FastAPI projects with hexagonal arch
 
 ### 🛠️ Global Installation
 ```bash
-cargo install fac
+cargo install faspi
 ```
 
 ### 💻 Basic Commands
 ```bash
 # Create new project
-fac new myapp
+faspi new myapp
 
 # Generate components
-fac make route user
-fac make model user
-fac make service user
-fac make core user
-fac make ports user
-fac make infrastructure user
+faspi make route user
+faspi make model user
+faspi make service user
+faspi make core user
+faspi make ports user
+faspi make infrastructure user
 ```
 ### 🎯 Optional Features
 When creating a new project, you can include additional features:
 
 ```bash
 # Create project with optional features
-fac new myapp --sql        # Include SQLAlchemy ORM support
-fac new myapp --supabase   # Include Supabase integration
-fac new myapp --auth       # Include JWT authentication
-fac new myapp --cors       # Include CORS middleware
-fac new myapp --cache      # Include Redis and FastAPI-Cache support
-fac new myapp --tasks      # Include Celery task queue and Flower monitoring
+faspi new myapp --sql        # Include SQLAlchemy ORM support
+faspi new myapp --supabase   # Include Supabase integration
+faspi new myapp --auth       # Include JWT authentication
+faspi new myapp --cors       # Include CORS middleware
+faspi new myapp --cache      # Include Redis and FastAPI-Cache support
+faspi new myapp --tasks      # Include Celery task queue and Flower monitoring
 
 # Combine multiple features
-fac new myapp --sql --auth --cache
+faspi new myapp --sql --auth --cache
 ```
 
 ## 📁 Project Structure
@@ -108,15 +112,15 @@ uvicorn main:app --reload
 ## 📚 Documentation
 For more details about available commands:
 ```bash
-fac --help
-fac make --help
+faspi --help
+faspi make --help
 ```
 
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) (English) and [LICENSE.es](LICENSE.es) (Spanish) files for details.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Licence MIT](https://img.shields.io/badge/Licence-MIT-97CA00?style=flat-square&logo=opensourceinitiative&logoColor=white)](LICENSE)
 
 ---
 
@@ -142,21 +146,21 @@ Un CLI potente y eficiente para generar proyectos FastAPI con arquitectura hexag
 
 ### 🛠️ Instalación Global
 ```bash
-cargo install fac
+cargo install faspi
 ```
 
 ### 💻 Comandos Básicos
 ```bash
 # Crear nuevo proyecto
-fac new myapp
+faspi new myapp
 
 # Generar componentes
-fac make route user
-fac make model user
-fac make service user
-fac make core user
-fac make ports user
-fac make infrastructure user
+faspi make route user
+faspi make model user
+faspi make service user
+faspi make core user
+faspi make ports user
+faspi make infrastructure user
 ```
 
 ### 🎯 Características Opcionales
@@ -164,15 +168,15 @@ Al crear un nuevo proyecto, puedes incluir características adicionales:
 
 ```bash
 # Crear proyecto con características opcionales
-fac new myapp --sql        # Incluir soporte para SQLAlchemy ORM
-fac new myapp --supabase   # Incluir integración con Supabase
-fac new myapp --auth       # Incluir autenticación JWT
-fac new myapp --cors       # Incluir middleware CORS
-fac new myapp --cache      # Incluir soporte para Redis y FastAPI-Cache
-fac new myapp --tasks      # Incluir cola de tareas Celery y monitoreo Flower
+faspi new myapp --sql        # Incluir soporte para SQLAlchemy ORM
+faspi new myapp --supabase   # Incluir integración con Supabase
+faspi new myapp --auth       # Incluir autenticación JWT
+faspi new myapp --cors       # Incluir middleware CORS
+faspi new myapp --cache      # Incluir soporte para Redis y FastAPI-Cache
+faspi new myapp --tasks      # Incluir cola de tareas Celery y monitoreo Flower
 
 # Combinar múltiples características
-fac new myapp --sql --auth --cache
+faspi new myapp --sql --auth --cache
 ```
 
 ## 📁 Estructura del Proyecto
@@ -227,8 +231,8 @@ uvicorn main:app --reload
 ## 📚 Documentación
 Para más detalles sobre los comandos disponibles:
 ```bash
-fac --help
-fac make --help
+faspi --help
+faspi make --help
 ```
 
 ---
@@ -239,7 +243,7 @@ fac make --help
 Este proyecto está bajo la Licencia MIT - vea los archivos [LICENSE](LICENSE) (inglés) y [LICENSE.es](LICENSE.es) (español) para más detalles.
 
 
-[![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-green.svg)](LICENSE)
+[![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-97CA00?style=flat-square&logo=opensourceinitiative&logoColor=white)](LICENSE)
 
 
 

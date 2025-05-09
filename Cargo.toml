@@ -1,17 +1,17 @@
 [package]
-name = "fac"
+name = "faspi"
 version = "1.0.0"
 edition = "2024"
 authors = ["Edwar Anthwam <https://github.com/1Terabit>"]
 description = "🚀 CLI generator for FastAPI projects with hexagonal architecture"
 license = "MIT"
-repository = "https://github.com/1Terabit/fac-fastapi-cli"
+repository = "https://github.com/1Terabit/faspi"
 keywords = ["cli", "scaffold", "fastapi"]
 categories = ["command-line-utilities"]
 exclude = ["/.gitignore", "/.env", "/target", "*.pyc"]
 
 [[bin]]
-name = "fac"
+name = "faspi"
 path = "src/main.rs"
 
 [dependencies]
