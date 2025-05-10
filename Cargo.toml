@@ -1,6 +1,6 @@
 [package]
 name = "faspi"
-version = "1.1.0"
+version = "1.1.1"
 edition = "2024"
 authors = ["Edwar Anthwam <https://github.com/1Terabit>"]
 description = "🚀 CLI generator for FastAPI projects with hexagonal architecture"
