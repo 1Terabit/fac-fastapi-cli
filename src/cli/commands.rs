@@ -1,9 +1,9 @@
-use clap::{Subcommand};
+use clap::Subcommand;
 use super::options::NewOptions;
 
 #[derive(Subcommand)]
 pub enum Commands {
-    /// 🆕 Create a new FastAPI-style app
+    /// 🆕 Create a new FastAPI app
     New {
         name: String,
         #[arg(short, long, help = "Additional dependencies to include")]
