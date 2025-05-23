@@ -1,8 +1,9 @@
 pub mod commands;
-pub mod parser;
 pub mod options;
+pub mod parser;
 pub mod update_checker;
 
-pub use commands::{Commands, MakeItem};
-pub use parser::Cli;
+pub use commands::Commands;
 pub use options::NewOptions;
+pub use parser::Cli;
+

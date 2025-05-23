@@ -3,7 +3,7 @@ use super::options::NewOptions;
 
 #[derive(Subcommand)]
 pub enum Commands {
-    /// 🆕 Create a new FastAPI app
+    /// 🆕 Create a new FastAPI project
     New {
         name: String,
         #[arg(short, long, help = "Additional dependencies to include")]
@@ -18,6 +18,10 @@ pub enum Commands {
         #[command(subcommand)]
         item: MakeItem,
     },
+    /// 🧩 Create a feature to organize your code
+        Entity {
+        name: String,
+    },
     /// 🧠 Create a use case to connect ports, services, and implementations
     Usecase {
         name: String,
@@ -26,18 +30,9 @@ pub enum Commands {
 
 #[derive(Subcommand)]
 pub enum MakeItem {
-    Route {
-        name: String,
-        #[arg(short, long, help = "HTTP method for the route (GET, POST, etc.)")]
-        method: Option<String>,
-    },
-    Model {
-        name: String,
-    },
-    Service {
-        name: String,
-    },
-    Core {
+    /// 🏗️ Create a complete entity with all its components
+    Entity {
+        /// Entity name
         name: String,
     },
 }

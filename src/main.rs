@@ -2,9 +2,10 @@ mod cli;
 mod handlers;
 mod utils;
 
+use crate::cli::commands::MakeItem;
 use crate::cli::update_checker::UpdateChecker;
 use clap::Parser;
-use cli::{Cli, Commands, MakeItem};
+use cli::{Cli, Commands};
 use handlers::new::NewCommand;
 
 fn main() {
@@ -23,16 +24,10 @@ fn main() {
             }
         }
         Commands::Make { item } => match item {
-            MakeItem::Route { name, method } => handlers::make::create_route(&name, method),
-            MakeItem::Model { name } => handlers::make::create_model(&name),
-            MakeItem::Service { name } => {
-                handlers::make::create_component("services", &name, "💼 Service", "service")
-            }
-            MakeItem::Core { name } => {
-                handlers::make::create_component("core", &name, "🧠 Core logic", "core")
-            }
+            MakeItem::Entity { name } => handlers::make::create_entity(&name),
         },
         Commands::Usecase { name } => handlers::usecase::create_usecase(&name),
+        Commands::Entity { name } => handlers::make::create_entity(&name),
     }
     let checker = UpdateChecker::new();
     if let Err(e) = checker.check_for_updates() {

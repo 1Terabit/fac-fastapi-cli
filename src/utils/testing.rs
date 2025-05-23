@@ -4,69 +4,20 @@ use std::path::Path;
 pub fn create_test_file(component_type: &str, name: &str, test_content: &str) {
     fs::create_dir_all("tests").unwrap();
     let test_dir = match component_type {
-        "route" => "tests/routes",
-        "model" => "tests/models",
-        "service" => "tests/services",
-        "core" => "tests/core",
-        "usecase" => "tests/usecases",
+        "api" => "tests/interfaces/api",
+        "entity" => "tests/core/entities",
+        "repository" => "tests/infrastructure/repositories",
+        "usecase" => "tests/application/use_cases",
         _ => "tests",
     };
 
     fs::create_dir_all(test_dir).unwrap();
     let test_path = Path::new(test_dir).join(format!("test_{}.py", name));
-    
+
     fs::write(&test_path, test_content)
         .unwrap_or_else(|_| panic!("❌ Failed to write test file for {}", name));
-    
+
     println!("🧪 Test created at '{}'", test_path.display());
-}
-
-pub fn generate_model_test(name: &str) -> String {
-    format!(
-        r#"# 🧪 Test for model: {0}
-import pytest
-from app.models.{0} import {0}_example
-
-def test_{0}_example():
-    result = {0}_example()
-    assert isinstance(result, str)
-    assert "Model" in result
-    assert "{0}" in result
-"#,
-        name
-    )
-}
-
-pub fn generate_service_test(name: &str) -> String {
-    format!(
-        r#"# 🧪 Test for service: {0}
-import pytest
-from app.services.{0} import {0}_service
-
-def test_{0}_service():
-    result = {0}_service()
-    assert isinstance(result, str)
-    assert "Service" in result
-    assert "{0}" in result
-"#,
-        name
-    )
-}
-
-pub fn generate_core_test(name: &str) -> String {
-    format!(
-        r#"# 🧪 Test for core component: {0}
-import pytest
-from app.core.{0} import {0}_core
-
-def test_{0}_core():
-    result = {0}_core()
-    assert isinstance(result, str)
-    assert "Core logic" in result
-    assert "{0}" in result
-"#,
-        name
-    )
 }
 
 pub fn generate_route_test(name: &str, http_method: &str) -> String {
